@@ -49,7 +49,7 @@ button{
     line-height: 50px;
 }
 h3{
-    direction: rtl;
+    float: inline-end;
 }
 
 /*mobile view*/
@@ -93,5 +93,8 @@ h3{
         margin-top: 15px;
         border-radius: 5px;
         margin-left: -10px;
+    }
+    h3{
+        float: inline-end;
     }
 }
