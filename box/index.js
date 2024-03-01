@@ -39,14 +39,19 @@ function checkGuess(userGuess, myGuess){
   if(userGuess){
 
     if (Number(userGuess) === myGuess)
-    alert("correct guess, kudos")
+    alert("correct guess, kudos");
   
 
-  else if (userGuess !== myGuess)
-    alert("incorrect, Guess again")
+    else if (Number(userGuess)> myGuess)
+    alert("Incorrect, Guess Again Too high");  
+
+  else if (Number(userGuess) < myGuess);
+  alert("incorrect, Guess Again Too High")
+
+  }
+
   
-}
-alert("Input is empty")
+
 }
 
 inputButton.addEventListener("click",function(e){
