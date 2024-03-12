@@ -1,61 +1,55 @@
-//const inputVal = document.querySelector("input").value
-//const inputButton = document.getElementsByClassName("btn")[0]
+window.addEventListener("DOMContentLoaded", () => {
+  //get your guess number from the input value
 
-//function displayval(){
- // alert(inputval.value)
+  const value = document.getElementById("met");
 
-//}
+  //get your button Element
+  const check = document.getElementById("btn");
 
-//const a = 10
-//const b = 30
-//const c = a + b 
-//console.log(c)
+  const feedBack = document.getElementById("feedback");
 
+  const chances = document.querySelector("span");
 
-//function add(a,b){
-  //return a + b
-//}
+  //check if guess is the same
 
+  let chancesNum = 5;
+  chances.innerHTML = chancesNum;
+  //generate a guess
+  const num = 39;
+  check.style.opacity = "0.5";
+  check.disabled = true;
 
+  value.addEventListener("keyup", () => {
+    let length = value.value.length;
 
-//get your guess number from the input value
+    if (length > 0 && length < 4 && value.value <= 100) {
+      check.style.opacity = "1";
+      check.disabled = false;
+    }
+    else {
+      check.disabled = true;
+      check.style.opacity = "0.5";
+    }
+  });
 
-const inputVal = document.querySelector("input")
+  check.addEventListener("click", () => {
+    if (value.value < num) {
+      feedBack.innerHTML = "Your Number is Low";
+    } 
+    else if (value.value > num) {
+      feed.innerHTML = "Your Number is too High";
+    }
+    else {
+      feedBack.innerHTML = "You are correct";
+    }
 
-//get your button Element
-
-const inputButton = document.getElementsByClassName("btn")[0]
-
-
-
-//generate a guess
-
-const myGuess = 39
-//check if guess is the same 
-
-function checkGuess(userGuess, myGuess){
-
-
-  if(userGuess){
-
-    if (Number(userGuess) === myGuess)
-    alert("correct guess, kudos");
-  
-
-    else if (Number(userGuess)> myGuess)
-    alert("Incorrect, Guess Again Too high");  
-
-  else if (Number(userGuess) < myGuess);
-  alert("incorrect, Guess Again Too High")
-
-  }
-
-  
-
-}
-
-inputButton.addEventListener("click",function(e){
-  e.preventDefault()
-  console.log(inputButton)
-  checkGuess(inputVal.value, myGuess)
-})
+    chancesNum--;
+    chances.innerHTML = chancesNum;
+    if (chancesNum <= 0) {
+      check.disabled = true;
+      check.style.opacity = "0.5";
+      value.disabled = true;
+      alert("You Have Exhausted Your Chances!!!");
+    }
+  });
+});

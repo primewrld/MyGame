@@ -13,13 +13,14 @@ main {
 }
 .chance{
     background-color: white;
-    height: 250px;
+    height: 270px;
     width: 350px;
     text-align: center;
     font-size: 20px;
     padding-top: 10px;
     margin-top: 100px;
     border-radius: 5px;
+    padding-bottom: 50px;
 }
 .chance input{
     width: 100px;
@@ -43,7 +44,7 @@ button{
     border-left: solid white;
     height: 200px;
     line-height: px;
-    margin-top: 70px;
+    margin-top: 100px;
 }
 .set h1{
     line-height: 50px;
@@ -85,7 +86,7 @@ h3{
     }
     .chance{
         background-color: white;
-        height: 250px;
+        height: 270px;
         width: 370px;
         text-align: center;
         font-size: 20px;
@@ -93,6 +94,7 @@ h3{
         margin-top: 15px;
         border-radius: 5px;
         margin-left: -10px;
+        padding-bottom: 50px;
     }
     h3{
         float: inline-end;
