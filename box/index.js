@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", () => {
       feedBack.innerHTML = "Your Number is Low";
     } 
     else if (value.value > num) {
-      feed.innerHTML = "Your Number is too High";
+      feedBack.innerHTML = "Your Number is too High";
     }
     else {
       feedBack.innerHTML = "You are correct";
